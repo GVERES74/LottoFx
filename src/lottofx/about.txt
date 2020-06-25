@@ -1,0 +1,5 @@
+ Készítette: Gábor Veres - Minden jog fenntartva
+            2018 - DjRed Software Ltd.
+            Utolsó módosítás: 2018.08.01.
+<Ha érdekel a Java programozási nyelv, akkor látogasd meg az 
+alábbi weboldalt az ingyenes oktatóvideókért.>

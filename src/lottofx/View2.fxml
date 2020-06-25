@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lottofx.ViewController">
+    <children>
+      <Pane id="startpane" fx:id="startpane" layoutY="26.0" prefHeight="562.0" prefWidth="608.0">
+         <children>
+            <ImageView id="startimage" fx:id="startimage" fitHeight="528.0" fitWidth="590.0" layoutX="10.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@smile.png" />
+               </image>
+            </ImageView>
+            <TextField id="starttext" fx:id="starttext" alignment="CENTER" editable="false" layoutX="48.0" layoutY="29.0" prefHeight="50.0" prefWidth="511.0" text=" A Long Time Ago, in a Galaxy Far Far Away..." />
+         </children>
+      </Pane>
+      <Pane id="basepane" fx:id="basepane" layoutX="1.0" layoutY="26.0" prefHeight="562.0" prefWidth="608.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="330.0" layoutX="120.0" layoutY="90.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" width="365.0" />
+            <Pane id="numberpane" fx:id="numberpane" blendMode="SRC_ATOP" layoutX="120.0" layoutY="90.0" prefHeight="350.0" prefWidth="365.0" />
+            <Label layoutX="14.0" layoutY="440.0" prefHeight="54.0" prefWidth="88.0" text="Nyerőszámok:" textAlignment="CENTER" />
+            <Text fill="#5136da" layoutX="212.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelölj be 5 számot" textAlignment="CENTER" wrappingWidth="198.19140625">
+               <font>
+                  <Font name="Cooper Black" size="14.0" />
+               </font></Text>
+            <Button id="closeApp" fx:id="closeApp" layoutX="510.0" layoutY="520.0" mnemonicParsing="false" onAction="#pressButtonCloseApp" text="Jön a Főnök!" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField id="talalattextfield" fx:id="talalattextfield" alignment="CENTER" editable="false" layoutX="130.0" layoutY="60.0" prefHeight="25.0" prefWidth="343.0" promptText="Izgatottan várjuk az eredményt..." visible="false" />
+            <Circle id="circle1" fx:id="circle1" blendMode="SRC_ATOP" fill="WHITE" layoutX="175.0" layoutY="520.0" radius="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+            <Label id="hitlabel1" fx:id="hitlabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="508.0" text="?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Circle id="circle2" fx:id="circle2" blendMode="SRC_ATOP" fill="WHITE" layoutX="235.0" layoutY="520.0" radius="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+            <Label id="hitlabel2" fx:id="hitlabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="508.0" text="?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Circle id="circle3" fx:id="circle3" blendMode="SRC_ATOP" fill="WHITE" layoutX="295.0" layoutY="520.0" radius="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+            <Label id="hitlabel3" fx:id="hitlabel3" alignment="CENTER" contentDisplay="CENTER" layoutX="290.0" layoutY="508.0" text="?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Circle id="circle4" fx:id="circle4" blendMode="SRC_ATOP" fill="WHITE" layoutX="355.0" layoutY="520.0" radius="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+            <Label id="hitlabel4" fx:id="hitlabel4" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="508.0" text="?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Circle id="circle5" fx:id="circle5" blendMode="SRC_ATOP" fill="WHITE" layoutX="415.0" layoutY="520.0" radius="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="3.0" visible="false" />
+            <Label id="hitlabel5" fx:id="hitlabel5" alignment="CENTER" contentDisplay="CENTER" layoutX="410.0" layoutY="508.0" text="?" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField id="szam1" fx:id="szam1" alignment="CENTER" layoutX="120.0" layoutY="450.0" prefHeight="35.0" prefWidth="35.0" />
+            <TextField id="szam2" fx:id="szam2" alignment="CENTER" layoutX="200.0" layoutY="450.0" prefHeight="35.0" prefWidth="35.0" />
+            <TextField id="szam3" fx:id="szam3" alignment="CENTER" layoutX="280.0" layoutY="450.0" prefHeight="35.0" prefWidth="35.0" />
+            <TextField id="szam4" fx:id="szam4" alignment="CENTER" layoutX="360.0" layoutY="450.0" prefHeight="35.0" prefWidth="35.0" />
+            <TextField id="szam5" fx:id="szam5" alignment="CENTER" layoutX="440.0" layoutY="450.0" prefHeight="35.0" prefWidth="35.0" />
+            <Pane id="javafxpane" fx:id="javafxpane" layoutX="443.0" layoutY="5.0" prefHeight="100.0" prefWidth="157.0" />
+            <Circle id="pushcircle" fx:id="pushcircle" fill="#ff1f23" layoutX="60.0" layoutY="265.0" onMouseClicked="#pushCircleMouseClicked" onMouseExited="#pushCircleMouseExit" onMouseMoved="#pushCircleMouseOn" onMousePressed="#pushCircleMousePressed" onMouseReleased="#pushCircleMouseReleased" radius="30.0" stroke="#67a821" strokeType="INSIDE">
+               <effect>
+                  <DropShadow color="#bf6d6d" offsetY="1.0" spread="0.2" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               
+            </Circle>
+            <Label id="pushlabel" fx:id="pushlabel" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="257.0" text="Sorsolás" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="alertpane" fx:id="alertpane" layoutX="190.0" layoutY="160.0" prefHeight="183.0" prefWidth="248.0" visible="false">
+         <effect>
+            <Blend />
+         </effect>
+         <children>
+            <Rectangle id="rect1" fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#b1b7bc" height="183.0" stroke="RED" strokeType="INSIDE" width="248.0" />
+            <Rectangle id="rect2" fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#626568" height="25.0" stroke="BLACK" strokeType="INSIDE" width="248.0" />
+            
+            
+            <Label id="alerttext" fx:id="alerttext" alignment="CENTER" layoutX="12.0" layoutY="41.0" prefHeight="97.0" prefWidth="226.0" textAlignment="CENTER" textFill="#dfff3d" wrapText="true" />
+            
+            <Label id="alertheadtext" fx:id="alertheadtext" alignment="CENTER" layoutX="31.0" prefHeight="25.0" prefWidth="182.0" text="Figyelem!" textAlignment="CENTER" textFill="#ddf508">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button id="btnclosepopup" fx:id="btnclosepopup" alignment="CENTER" layoutX="92.0" layoutY="143.0" mnemonicParsing="false" onAction="#pressButtonClosePopup" prefHeight="25.0" prefWidth="60.0" text="Vissza" textAlignment="CENTER" />
+         </children>
+      </Pane>
+      <AnchorPane id="aboutanchorpane" fx:id="aboutanchorpane" layoutX="80.0" layoutY="50.0" prefHeight="246.0" prefWidth="450.0" visible="false">
+         <children>
+            <Rectangle id="aboutrectangle" fx:id="aboutrectangle" arcHeight="5.0" arcWidth="5.0" fill="#b6bbbf" height="200.0" layoutX="22.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <Rectangle id="aboutheadrectangle" fx:id="aboutheadrectangle" arcHeight="5.0" arcWidth="5.0" fill="#4f5c68" height="30.0" layoutX="22.0" layoutY="18.0" stroke="#9a642a" strokeType="INSIDE" width="400.0" />
+            <Label layoutX="22.0" layoutY="21.0" prefHeight="25.0" prefWidth="206.0" text="  Információ" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextArea id="abouttextarea" fx:id="abouttextarea" editable="false" layoutX="66.0" layoutY="55.0" prefHeight="124.0" prefWidth="312.0" text="&#9;" wrapText="true" />
+            <Hyperlink id="hyperlink1" fx:id="hyperlink1" alignment="CENTER" layoutX="91.0" layoutY="135.0" onAction="#hyperlinkSetOnAction" prefHeight="35.0" prefWidth="263.0" text="http://sanfranciscoboljottem.com/" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Hyperlink>
+            <Button id="aboutbutton" fx:id="aboutbutton" alignment="CENTER" layoutX="195.0" layoutY="185.0" mnemonicParsing="false" onAction="#pressButtonCloseAbout" prefHeight="25.0" prefWidth="60.0" text="Bezár" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <Pane id="confirmexit" fx:id="confirmexit" layoutX="138.0" layoutY="122.0" prefHeight="145.0" prefWidth="330.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfdae4" height="145.0" stroke="BLACK" strokeType="INSIDE" width="330.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="45.0" prefHeight="35.0" prefWidth="238.0" text="Biztosan kilépsz?" textAlignment="CENTER" textFill="#f21329">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button id="btn_cexit" fx:id="btn_cexit" layoutX="60.0" layoutY="95.0" mnemonicParsing="false" onAction="#pressButtonCloseApp" prefHeight="25.0" prefWidth="60.0" text="Igen" textAlignment="CENTER" />
+            <Button id="btn_ccancel" fx:id="btn_ccancel" cancelButton="true" layoutX="215.0" layoutY="95.0" mnemonicParsing="false" text="Mégsem" textAlignment="CENTER" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7e8f9e" height="25.0" stroke="BLACK" strokeType="INSIDE" width="330.0" />
+            <Label prefHeight="25.0" prefWidth="169.0" text="  Figyelem!" textAlignment="CENTER" textFill="#d7f507">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="menupane" fx:id="menupane" prefHeight="30.0" prefWidth="608.0">
+         <children>
+            <MenuBar id="menubar1" fx:id="menubar1">
+              <menus>
+                <Menu id="menujatek1" fx:id="menujatek1" text="Játék">
+                  <items>
+                        <MenuItem id="newgamemenuitem" fx:id="newgamemenuitem" mnemonicParsing="false" onAction="#chooseNewGame" text="Új játék" />
+                    <MenuItem id="menuitemclose1" fx:id="menuitemclose1" mnemonicParsing="false" onAction="#showExitConfirmPane" text="Kilépés" />
+                  </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="J" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Beállítások">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Lottó" />
+                  </items>
+                </Menu>
+                <Menu id="menuinfo1" fx:id="menuinfo1" mnemonicParsing="false" text="Infó">
+                  <items>
+                    <MenuItem id="menuabout1" fx:id="menuabout1" mnemonicParsing="false" onAction="#chooseMenuAbout1" text="Készítő" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
